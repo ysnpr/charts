@@ -2,33 +2,32 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: apache-airflow
+  namespace: argocd
+
 spec:
-  destination:
-    namespace: airflow
-    server: https://kubernetes.default.svc
+  project: default
+
   source:
-    path: ''
     repoURL: https://airflow.apache.org
-    targetRevision: 1.19.0
     chart: airflow
+    targetRevision: 1.19.0
+
     helm:
       parameters:
         - name: createUserJob.useHelmHooks
-          value: 'false'
+          value: "false"
         - name: migrateDatabaseJob.useHelmHooks
-          value: 'false'
+          value: "false"
         - name: config.core.load_examples
-          value: 'True'
-  sources: []
-  project: default
-project: default
-source:
-  repoURL: https://airflow.apache.org
-  targetRevision: 1.19.0
-  chart: airflow
-destination:
-  server: https://kubernetes.default.svc
-  namespace: airflow
-syncPolicy:
-  syncOptions:
-    - CreateNamespace=true
+          value: "True"
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: airflow
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
