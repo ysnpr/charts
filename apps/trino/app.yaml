@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/ysnpy/charts.git
+    repoURL: https://github.com/ysnpr/charts.git
     targetRevision: main
     path: apps/trino
 
