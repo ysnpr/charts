@@ -1,10 +1,15 @@
 # apps/airflow3/values.yaml
 
 createUserJob:
-  useHelmHooks: true
+  useHelmHooks: false
+  applyCustomEnv: false
 
 migrateDatabaseJob:
-  useHelmHooks: true
+  enabled: true  
+  useHelmHooks: false
+  applyCustomEnv: false
+  jobAnnotations:
+      "argocd.argoproj.io/hook": Sync
 
 config:
   core:
