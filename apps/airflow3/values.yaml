@@ -1,10 +1,10 @@
 # apps/airflow3/values.yaml
 
 createUserJob:
-  useHelmHooks: false
+  useHelmHooks: true
 
 migrateDatabaseJob:
-  useHelmHooks: false
+  useHelmHooks: true
 
 config:
   core:
