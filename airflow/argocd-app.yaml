@@ -19,7 +19,7 @@ spec:
         - name: migrateDatabaseJob.useHelmHooks
           value: "false"
         - name: config.core.load_examples
-          value: "true"
+          value: "false"
 
   destination:
     server: https://kubernetes.default.svc
