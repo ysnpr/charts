@@ -1,16 +1,17 @@
 # apps/airflow/values.yaml
 
-postgresql:
-  enabled: true
+airflow:
+  postgresql:
+    enabled: true
 
-redis:
-  enabled: true
+  redis:
+    enabled: true
 
-createUserJob:
-  useHelmHooks: false
+  createUserJob:
+    useHelmHooks: false
 
-migrateDatabaseJob:
-  useHelmHooks: false
+  migrateDatabaseJob:
+    useHelmHooks: false
 
-config.core:
-  load_examples: false
+  config.core:
+    load_examples: false
