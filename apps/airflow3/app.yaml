@@ -7,14 +7,17 @@ metadata:
 spec:
   project: default
 
-  source:
-    repoURL: https://airflow.apache.org
-    chart: airflow
-    targetRevision: 1.19.0
+  sources:
+    - repoURL: https://airflow.apache.org
+      chart: airflow
+      targetRevision: 1.19.0
+      helm:
+        valueFiles:
+          - $values/apps/airflow3/values.yaml
 
-    helm:
-      valueFiles:
-        - values.yaml
+    - repoURL: https://github.com/ysnpy/charts.git
+      targetRevision: main
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
