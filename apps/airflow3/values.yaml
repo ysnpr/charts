@@ -18,6 +18,6 @@ config:
   api:
     expose_config: "true"
 
-extraEnv: |-
+env:
   - name: AIRFLOW__CORE__LOAD_EXAMPLES
     value: "True"
