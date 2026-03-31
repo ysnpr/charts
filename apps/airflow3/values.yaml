@@ -1,11 +1,5 @@
 # apps/airflow3/values.yaml
 
-postgresql:
-  enabled: true
-
-redis:
-  enabled: true
-
 createUserJob:
   useHelmHooks: false
 
