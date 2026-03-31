@@ -13,15 +13,8 @@ spec:
     targetRevision: 1.19.0
 
     helm:
-      parameters:
-        - name: createUserJob.useHelmHooks
-          value: "false"
-        - name: migrateDatabaseJob.useHelmHooks
-          value: "false"
-        - name: config.core.load_examples
-          value: "true"
-        - name: config.api.expose_config
-          value: 'true'
+      valueFiles:
+        - values.yaml
 
   destination:
     server: https://kubernetes.default.svc
