@@ -13,6 +13,8 @@ migrateDatabaseJob:
   useHelmHooks: false
 
 config:
+  core:
+    load_examples: "true"
   api:
     expose_config: "true"
 
