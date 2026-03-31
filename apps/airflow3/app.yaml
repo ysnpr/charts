@@ -20,6 +20,8 @@ spec:
           value: "false"
         - name: config.core.load_examples
           value: "true"
+        - name: config.api.expose_config
+          value: 'true'
 
   destination:
     server: https://kubernetes.default.svc
