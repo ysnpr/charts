@@ -8,9 +8,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://trinodb.github.io/charts
-    chart: trino
-    targetRevision: 1.42.1
+    repoURL: https://github.com/ysnpy/charts.git
+    targetRevision: main
+    path: apps/trino
 
     helm:
       valueFiles:

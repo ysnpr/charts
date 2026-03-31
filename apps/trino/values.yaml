@@ -1,14 +1,15 @@
-catalogs:
-  tpch: |-
-    connector.name=tpch
-    tpch.splits-per-node=5
+trino:
+  catalogs:
+    tpch: |-
+      connector.name=tpch
+      tpch.splits-per-node=5
 
-  lakehouse: |-
-    connector.name=iceberg
-    hive.metastore.uri=thrift://example.net:9083
+    lakehouse: |-
+      connector.name=iceberg
+      hive.metastore.uri=thrift://example.net:9083
 
-  rdbms: |-
-    connector.name=postgresql
-    connection-url=jdbc:postgresql://example.net:5432/database
-    connection-user=root
-    connection-password=secret
+    rdbms: |-
+      connector.name=postgresql
+      connection-url=jdbc:postgresql://example.net:5432/database
+      connection-user=root
+      connection-password=secret
