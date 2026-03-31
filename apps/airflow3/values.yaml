@@ -13,5 +13,6 @@ airflow:
   migrateDatabaseJob:
     useHelmHooks: false
 
-  config.core:
-    load_examples: true
+  config:
+    core:
+      load_examples: true
