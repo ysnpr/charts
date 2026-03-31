@@ -15,7 +15,7 @@ spec:
         valueFiles:
           - $values/apps/airflow3/values.yaml
 
-    - repoURL: https://github.com/ysnpy/charts.git
+    - repoURL: https://github.com/ysnpr/charts.git
       targetRevision: main
       ref: values
 
