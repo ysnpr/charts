@@ -9,9 +9,6 @@ charts/
 ├── bootstrap/          # Ponto de entrada — única app registrada manualmente no Argo CD
 ├── apps/               # Apps filhas gerenciadas pelo bootstrap
 │   └── airflow3/       # Apache Airflow — app.yaml + values.yaml
-├── environments/       # Overlays Kustomize por ambiente
-│   └── dev/
-├── projects/           # AppProjects do Argo CD (controle de acesso/escopo)
 │
 ├── airflow/            # [LEGADO] Teste standalone do Airflow
 └── trino/              # [LEGADO] Teste standalone do Trino
