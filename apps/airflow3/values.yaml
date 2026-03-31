@@ -14,4 +14,4 @@ airflow:
     useHelmHooks: false
 
   config.core:
-    load_examples: false
+    load_examples: true
