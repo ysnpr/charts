@@ -1,2 +1,3 @@
-resources:
-  - airflow3/app.yaml
+components:
+  - components/airflow3  # toggle: comment out to disable
+  - components/trino     # toggle: comment out to disable
